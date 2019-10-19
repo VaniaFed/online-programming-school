@@ -14,15 +14,17 @@ const cache = new InMemoryCache({
     dataIdFromObject: movie => movie.id || null
 });
 
-export const httpClient = () => new ApolloClient({
-    ssrMode: true,
-    link: httpLink,
-    cache
-});
+export const httpClient = () =>
+    new ApolloClient({
+        ssrMode: true,
+        link: httpLink,
+        cache
+    });
 
-const restLink = () => new RestLink({
-    uri: '/api/'
-});
+const restLink = () =>
+    new RestLink({
+        uri: '/api/'
+    });
 
 export const restClient = () => {
     return new ApolloClient({
@@ -31,6 +33,7 @@ export const restClient = () => {
     });
 };
 
-const getClientWithNecessaryLink = () => typeof window === 'undefined' ? httpClient() : restClient();
+const getClientWithNecessaryLink = () =>
+    typeof window === 'undefined' ? httpClient() : restClient();
 
 export const client = _.memoize(getClientWithNecessaryLink);

@@ -1,18 +1,15 @@
 import produce from 'immer';
-import {
-    FETCH_USER_SUCCESS,
-    FETCH_USER_ERROR,
-} from 'constants.ts';
-import { User } from 'types/index'
+import { FETCH_USER_SUCCESS, FETCH_USER_ERROR } from 'constants.ts';
+import { User } from 'types/index';
 
 interface UserState {
-    user: User,
-    error: string,
+    user: User;
+    error: string;
 }
 
 const initialState: UserState = {
     user: {},
-    error: '',
+    error: ''
 };
 
 export const user = (state = initialState, action): UserState => {

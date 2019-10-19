@@ -4,7 +4,7 @@ import {
     FETCH_USER_ERROR
 } from 'constants.ts';
 
-import { User } from 'types/index'
+import { User } from 'types/index';
 
 export const fetchUserRequest = () => {
     return {
