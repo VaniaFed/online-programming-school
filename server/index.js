@@ -17,6 +17,10 @@ const handle = app.getRequestHandler();
         app.render(req, res, '/user', { something: 5 });
     });
 
+    server.get('/login', (req, res) => {
+        app.render(req, res, '/login');
+    });
+
     server.get('/api/getUser', (req, res) => {
         connection.query('SELECT * FROM customer', (_, results) => {
             console.log(results[0]);
