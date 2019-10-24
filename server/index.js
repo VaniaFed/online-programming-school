@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const express = require('express');
 const next = require('next');
+const bodyParser = require('body-parser');
 const connection = require('./db');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -11,6 +12,12 @@ const handle = app.getRequestHandler();
 (async () => {
     await app.prepare();
     const server = express();
+    server.use(bodyParser.json());
+    server.use(
+        bodyParser.urlencoded({
+            extended: true
+        })
+    );
 
     server.get('/', (req, res) => res.redirect('/user'));
 
@@ -19,6 +26,12 @@ const handle = app.getRequestHandler();
     });
 
     server.get('/login', (req, res) => {
+        app.render(req, res, '/login');
+    });
+
+    server.post('/login', (req, res) => {
+        console.log('logging');
+        console.log(req.body);
         app.render(req, res, '/login');
     });
 

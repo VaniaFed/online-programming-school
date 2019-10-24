@@ -3,10 +3,19 @@ import { Form, Field } from 'react-final-form';
 import { Button } from 'components/button';
 import './login-form.scss';
 
+const login = loginData => {
+    console.log(loginData);
+    fetch('/login', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+    });
+};
+
 export const LoginForm = () => {
-    const onSubmit = () => {
-        console.log('hello');
-    };
+    const onSubmit = login;
     const validate = (values: any) => {};
     interface Fields {
         key: string;
