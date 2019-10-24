@@ -1,4 +1,5 @@
 @import '~_vars.scss';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,14 +12,15 @@ a {
 }
 
 body {
-    background: #fff;
+    background: #efefef;
     color: #333;
-    font: 16px/1.5 Roboto, Arial, sans-serif;
+    font: 16px/1.5 Montserrat, Arial, sans-serif;
 }
 
 img {
     width: 100%;
 }
+
 header,
 footer {
     background: #333;

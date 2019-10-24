@@ -1,3 +1,34 @@
-.login__text-input {
-    padding: 20px;
+.login-form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    background: #fff;
+}
+
+.login-form__title {
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.login-form__label {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.login-form__text-input {
+    padding: 14px 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-form__text-input:last-child {
+    margin-bottom: 0;
+}
+
+.login-form__button-submit {
+    width: 100%;
+    padding: 14px 20px;
 }
