@@ -16,8 +16,11 @@ const serverConfig = {
     ]
 };
 
-module.exports = withPlugins([withTypescript, withSass, withImages], {
-    webpack: config => {
-        return merge(config, aliasConfig, serverConfig);
+module.exports = withPlugins(
+    [withTypescript, [withSass, { cssModules: true }], withImages],
+    {
+        webpack: config => {
+            return merge(config, aliasConfig, serverConfig);
+        }
     }
-});
+);
