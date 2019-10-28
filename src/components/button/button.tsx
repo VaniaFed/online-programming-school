@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import './button.scss';
+import styles from './button.scss';
 import { Props } from './props';
 
 export const Button: FC<Props> = ({
@@ -9,7 +9,7 @@ export const Button: FC<Props> = ({
     className,
     onClick
 }: Props) => {
-    const resultClass = classNames(className, 'button');
+    const resultClass = classNames(className, styles.button);
     return (
         // eslint-disable-next-line react/button-has-type
         <button

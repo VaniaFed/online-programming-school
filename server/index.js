@@ -19,7 +19,7 @@ const handle = app.getRequestHandler();
         })
     );
 
-    server.get('/', (req, res) => res.redirect('/user'));
+    server.get('/', (req, res) => res.redirect('/login'));
 
     server.get('/user', (req, res) => {
         app.render(req, res, '/user', { something: 5 });
