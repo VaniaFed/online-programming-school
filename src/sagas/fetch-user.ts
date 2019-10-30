@@ -2,7 +2,7 @@ import { put, call, takeEvery } from 'redux-saga/effects';
 import { actions } from 'actions/index';
 import { User } from 'types/index';
 
-import { FETCH_USER_REQUEST } from 'constants.ts';
+import { FETCH_USER_REQUEST } from 'user-constants';
 import { services } from 'services/index';
 
 export function* fetchUser() {

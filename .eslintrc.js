@@ -36,7 +36,7 @@ module.exports = {
                     ['containers', './src/containers'],
                     ['actions', './src/actions'],
                     ['reducers', './src/reducers'],
-                    ['constants.ts', './src/constants.ts'],
+                    ['user-constants', './src/user-constants.ts'],
                     ['selectors', './src/selectors'],
                     ['types', './src/types'],
                     ['utils', './src/utils'],

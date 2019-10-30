@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import produce from 'immer';
-import { FETCH_USER_SUCCESS, FETCH_USER_ERROR } from 'constants.ts';
+import { FETCH_USER_SUCCESS, FETCH_USER_ERROR } from 'user-constants';
 import { User } from 'types/index';
 
 interface UserState {

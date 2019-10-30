@@ -2,8 +2,7 @@
     "presets": [
         "@babel/preset-env",
         "@babel/preset-typescript",
-        "@babel/preset-react",
-        "next/babel"
+        "@babel/preset-react"
     ],
     "plugins": ["styled-jsx/babel", "@babel/plugin-proposal-class-properties"]
 }

@@ -1,4 +1,9 @@
+/* eslint-disable no-underscore-dangle */
 export const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
 export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
 export const FETCH_USER_ERROR = 'FETCH_USER_ERROR';
 export const SET_USERNAME = 'SET_USERNAME';
+
+declare const CLIENT_SIDE_RENDERING: string;
+const _CLIENT_SIDE_RENDERING = CLIENT_SIDE_RENDERING;
+export { _CLIENT_SIDE_RENDERING as CLIENT_SIDE_RENDERING };

@@ -2,7 +2,7 @@ import {
     FETCH_USER_REQUEST,
     FETCH_USER_SUCCESS,
     FETCH_USER_ERROR
-} from 'constants.ts';
+} from 'user-constants';
 
 import { User } from 'types/index';
 
