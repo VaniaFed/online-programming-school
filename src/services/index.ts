@@ -5,7 +5,7 @@ const fetch = {
     getUser
 };
 
-const logger = f => ({
+const logger = (f: any) => ({
     getUser: () => {
         console.log('getting user');
         return f.getUser();

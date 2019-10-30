@@ -4,16 +4,15 @@ import { FETCH_USER_SUCCESS, FETCH_USER_ERROR } from 'user-constants';
 import { User } from 'types/index';
 
 interface UserState {
-    user: User;
+    user?: User;
     error: string;
 }
 
 const initialState: UserState = {
-    user: {},
     error: ''
 };
 
-export const user = (state = initialState, action): UserState => {
+export const user = (state = initialState, action: any): UserState => {
     const { type } = action;
     return produce(state, draft => {
         switch (type) {

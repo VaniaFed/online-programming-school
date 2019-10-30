@@ -1,18 +1,26 @@
 import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import {
+    InMemoryCache,
+    IdGetter,
+    InMemoryCacheConfig
+} from 'apollo-cache-inmemory';
 import { createHttpLink } from 'apollo-link-http';
 import { RestLink } from 'apollo-link-rest';
-import fetch from 'node-fetch';
+import fetch from 'cross-fetch';
 import _ from 'lodash';
 
 const httpLink = createHttpLink({
-    uri: '/api/',
+    uri: '/api/movies/',
     useGETForQueries: true,
     fetch
 });
-const cache = new InMemoryCache({
-    dataIdFromObject: movie => movie.id || null
-});
+const dataIdFromObject: IdGetter = movie => movie.id || null;
+
+const config: InMemoryCacheConfig = {
+    dataIdFromObject
+};
+
+const cache = new InMemoryCache(config);
 
 export const httpClient = () =>
     new ApolloClient({
@@ -23,7 +31,7 @@ export const httpClient = () =>
 
 const restLink = () =>
     new RestLink({
-        uri: '/api/'
+        uri: '/api/movies/'
     });
 
 export const restClient = () => {

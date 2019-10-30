@@ -7,7 +7,7 @@ import styles from './user-form.module.scss';
 
 interface Props {
     title: string;
-    className: string;
+    className?: string;
     fieldsData: Fields[];
     onSubmit(something?: any): any;
     validate(something?: any): any;
