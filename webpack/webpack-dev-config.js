@@ -12,7 +12,22 @@ module.exports = {
         rules: [
             {
                 test: /\.css|scss$/,
+                exclude: /\.module\.scss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
+                include: path.resolve(__dirname, '../src')
+            },
+            {
+                test: /\.modules.scss$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    },
+                    'sass-loader'
+                ],
                 include: path.resolve(__dirname, '../src')
             },
             {
