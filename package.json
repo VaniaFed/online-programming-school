@@ -29,7 +29,7 @@
         "babel-jest": "^24.8.0",
         "babel-loader": "^8.0.6",
         "cross-env": "^5.2.0",
-        "css-loader": "1.0.0",
+        "css-loader": "^3.2.0",
         "cssnano": "^4.1.10",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
@@ -122,11 +122,13 @@
         "react-final-form": "^6.3.0",
         "react-redux": "^7.1.0",
         "react-router-dom": "^5.1.2",
+        "react-test-renderer": "^16.11.0",
         "redux": "^4.0.4",
         "redux-saga": "^1.0.5",
         "redux-saga-test-plan": "^4.0.0-beta.4",
         "regenerator-runtime": "^0.13.3",
         "reselect": "^4.0.0",
+        "rxjs": "^6.5.3",
         "styled-components": "^4.3.2"
     }
 }
