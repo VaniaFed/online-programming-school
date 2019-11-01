@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Table } from './index';
+import { TableHeader } from './index';
 
 const headers = [
     {
@@ -15,19 +15,6 @@ const headers = [
     }
 ];
 
-const body = [
-    {
-        text: 'helel',
-        href: 'vk.com'
-    },
-    {
-        text: 'helel'
-    },
-    {
-        text: 'helel'
-    }
-];
-
 storiesOf('TableHeader', module).add('regular', () => (
-    <Table headers={headers} body={body} />
+    <TableHeader headers={headers} />
 ));
