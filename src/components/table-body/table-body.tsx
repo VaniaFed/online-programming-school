@@ -1,8 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
 import { TableCell } from 'components/table-cell';
 import { TableBody as ITableBody } from 'types/index';
-import styles from './table-body.module.scss';
 
 interface Props {
     body: ITableBody[][];
@@ -10,9 +8,8 @@ interface Props {
 }
 
 export const TableBody = ({ body, className }: Props) => {
-    const bodyContainerClass = classNames(styles['table-body'], className);
     return (
-        <tbody className={bodyContainerClass}>
+        <tbody className={className}>
             {body.map((row: ITableBody[]) => (
                 <tr>
                     {row.map((cell: ITableBody) => (
