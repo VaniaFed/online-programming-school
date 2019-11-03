@@ -2,24 +2,37 @@ import React from 'react';
 import { TableHeader } from 'components/table-header';
 import { TableBody } from 'components/table-body';
 import classNames from 'classnames';
-import {
-    TableHeader as ITableHeader,
-    TableBody as ITableBody
-} from 'types/index';
+import { TableHeader as ITableHeader, TableRow } from 'types/index';
 import styles from './table.module.scss';
 
-interface Props {
-    headers: ITableHeader[];
-    body: ITableBody[][];
-    className?: string;
+interface Action {
+    type: string;
+    fn(): any;
+    text: string;
 }
 
-export const Table = ({ headers, body, className }: Props) => {
+interface Props {
+    data: {
+        headers: ITableHeader[];
+        body: TableRow[];
+    };
+    className?: string;
+    actions: Action[];
+}
+
+export const Table = ({ data, className, actions }: Props) => {
     const tableClass = classNames(className, styles.table);
     return (
         <table className={tableClass}>
-            <TableHeader headers={headers} className={styles.table__header} />
-            <TableBody body={body} className={styles.table__body} />
+            <TableHeader
+                headers={data.headers}
+                className={styles.table__header}
+            />
+            <TableBody
+                body={data.body}
+                className={styles.table__body}
+                actions={actions}
+            />
         </table>
     );
 };
