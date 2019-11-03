@@ -12,13 +12,12 @@ interface Props {
 export const TableHeader = ({ headers, className }: Props) => {
     const headerContainerClass = classNames(styles['table-header'], className);
     return (
-        <div className={headerContainerClass}>
-            {headers.map((item: ITableHeader) => (
-                <TableCell
-                    text={item.text}
-                    className={styles['table-header__text']}
-                />
-            ))}
-        </div>
+        <thead className={headerContainerClass}>
+            <tr>
+                {headers.map((item: ITableHeader) => (
+                    <TableCell text={item.text} type="header" />
+                ))}
+            </tr>
+        </thead>
     );
 };

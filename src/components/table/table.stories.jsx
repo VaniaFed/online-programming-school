@@ -5,27 +5,59 @@ import { Table } from './index';
 
 const headers = [
     {
-        text: 'hello'
+        text: 'ФИО'
     },
     {
-        text: 'hello'
+        text: 'Тема'
     },
     {
-        text: 'hello'
+        text: 'Зарплата'
+    },
+    {
+        text: 'Дата начала работы'
+    },
+    {
+        text: 'Паспортные данные'
     }
 ];
 
 const body = [
-    {
-        text: 'helel',
-        href: 'vk.com'
-    },
-    {
-        text: 'helel'
-    },
-    {
-        text: 'helel'
-    }
+    [
+        {
+            text: 'Федяков Иван Дмитриевич',
+            href: 'https://vk.com/im?sel=201610900'
+        },
+        {
+            text: 'Css'
+        },
+        {
+            text: '200к'
+        },
+        {
+            text: '2019.11.01'
+        },
+        {
+            text: '4353 123123'
+        }
+    ],
+    [
+        {
+            text: 'Федяков Иван Дмитриевич',
+            href: 'https://vk.com/vaniafed'
+        },
+        {
+            text: 'Css'
+        },
+        {
+            text: '200к'
+        },
+        {
+            text: '2019.11.01'
+        },
+        {
+            text: '4353 123123'
+        }
+    ]
 ];
 
 storiesOf('Table', module).add('regular', () => (
