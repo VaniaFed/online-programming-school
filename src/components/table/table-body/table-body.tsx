@@ -1,7 +1,8 @@
 import React from 'react';
-import { TableCell } from 'components/table-cell';
+import { TableCell } from 'components/table/table-cell';
 import { TableRow, TableCell as ITableCell } from 'types/index';
 import styles from './table-body.module.scss';
+
 interface Action {
     type: string;
     fn(): any;
@@ -24,6 +25,7 @@ export const TableBody = ({ body, className, actions }: Props) => {
                     ))}
                     {actions.map((action: any) => (
                         <button
+                            type="button"
                             className={styles['table-body__control-button']}
                             onClick={() => {
                                 action.fn(row.id);

@@ -1,6 +1,6 @@
 import React from 'react';
-import { TableHeader } from 'components/table-header';
-import { TableBody } from 'components/table-body';
+import { TableHeader } from 'components/table/table-header';
+import { TableBody } from 'components/table/table-body';
 import classNames from 'classnames';
 import { TableHeader as ITableHeader, TableRow } from 'types/index';
 import styles from './table.module.scss';

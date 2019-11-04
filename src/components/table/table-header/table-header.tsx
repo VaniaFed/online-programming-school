@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableCell } from 'components/table-cell';
+import { TableCell } from 'components/table/table-cell';
 import { TableHeader as ITableHeader } from 'types/index';
 
 interface Props {
