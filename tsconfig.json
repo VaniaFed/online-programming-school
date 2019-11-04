@@ -33,6 +33,7 @@
             "lib/*": ["./src/lib/*"],
             "services/*": ["./src/services/*"],
             "sagas/*": ["./src/sagas/*"],
+            "pages/*": ["./src/pages/*"],
             "_vars.scss": ["./src/_vars.scss"],
             "user-constants": ["./src/user-constants.ts"]
         }

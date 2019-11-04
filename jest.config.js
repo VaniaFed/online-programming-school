@@ -14,6 +14,7 @@ module.exports = {
         '^services(.*)$': '<rootDir>/src/services$1',
         '^sagas(.*)$': '<rootDir>/src/sagas$1',
         '^types(.*)$': '<rootDir>/src/types$1',
+        '^pages(.*)$': '<rootDir>/src/pages$1',
         '^.+\\.js(jsx)$': 'babel-jest',
         '\\.(css|less|scss|sass)$': 'jest-transform-stub'
     },

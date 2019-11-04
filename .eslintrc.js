@@ -43,6 +43,7 @@ module.exports = {
                     ['lib', './src/lib'],
                     ['src', './src'],
                     ['sagas', './src/sagas'],
+                    ['pages', './src/pages'],
                     ['services', './src/services']
                 ],
                 extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']

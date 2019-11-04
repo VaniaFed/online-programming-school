@@ -13,6 +13,7 @@ module.exports = {
             utils: path.resolve(__dirname, '../src/utils/'),
             types: path.resolve(__dirname, '../src/types/'),
             sagas: path.resolve(__dirname, '../src/sagas/'),
+            pages: path.resolve(__dirname, '../src/pages/'),
             lib: path.resolve(__dirname, '../src/lib/'),
             services: path.resolve(__dirname, '../src/services/'),
             'user-constants': path.resolve(
