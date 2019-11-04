@@ -1,4 +1,4 @@
 import React from 'react';
-import { LoginPage } from 'containers/pages/login-page';
+import { LoginPage } from 'pages/login-page';
 
 export default LoginPage;
