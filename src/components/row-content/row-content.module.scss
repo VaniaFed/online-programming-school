@@ -1,11 +1,15 @@
 .row-content {
     display: flex;
     flex-direction: row;
+    justify-content: stretch;
     @media screen and (max-width: 600px) {
         flex-direction: column;
     }
 }
 
 .card {
-    margin: 20px;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
 }
