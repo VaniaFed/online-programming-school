@@ -2,23 +2,23 @@ import React from 'react';
 import classNames from 'classnames';
 import { Card as CardType } from 'types/index';
 import { Card } from 'components/card';
-import styles from './row-content.module.scss';
+import styles from './card-layout.module.scss';
 
-type CourseCard = CardType & {
+type Card = CardType & {
     className: string;
     duration: string;
     price: string;
 };
 
 interface Props {
-    data: CourseCard[];
+    data: Card[];
     cardClassName?: string;
 }
 
-export const RowContent = ({ data, cardClassName }: Props) => {
+export const CardLayout = ({ data, cardClassName }: Props) => {
     return (
-        <div className={styles['row-content']}>
-            {data.map((item: CourseCard) => (
+        <div className={styles['card-layout']}>
+            {data.map((item: Card) => (
                 <Card
                     className={classNames(styles.card, cardClassName)}
                     {...item}

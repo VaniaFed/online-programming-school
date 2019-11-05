@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Card as CardType } from 'types/index';
 import { SellCard } from './sell-card';
-import styles from './row-sell-content.module.scss';
+import styles from './sell-card-layout.module.scss';
 
 type CourseCard = CardType & {
     className: string;
@@ -15,9 +15,9 @@ interface Props {
     cardClassName?: string;
 }
 
-export const RowSellContent = ({ data, cardClassName }: Props) => {
+export const SellCardLayout = ({ data, cardClassName }: Props) => {
     return (
-        <div className={styles['row-sell-content']}>
+        <div className={styles['sell-card-layout']}>
             {data.map((item: CourseCard) => (
                 <SellCard
                     className={classNames(styles.card, cardClassName)}

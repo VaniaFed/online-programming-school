@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { RowContent } from './index';
+import { CardLayout } from './index';
 
 const rowDataWithLinks = [
     {
@@ -50,6 +50,6 @@ const rowDataWithoutLinks = [
         price: '$20'
     }
 ];
-storiesOf('RowContent', module)
-    .add('link', () => <RowContent data={rowDataWithLinks} />)
-    .add('no-link', () => <RowContent data={rowDataWithoutLinks} />);
+storiesOf('CardLayout', module)
+    .add('link', () => <CardLayout data={rowDataWithLinks} />)
+    .add('no-link', () => <CardLayout data={rowDataWithoutLinks} />);
