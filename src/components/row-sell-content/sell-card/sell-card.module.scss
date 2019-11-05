@@ -1,0 +1,38 @@
+.sell-card__wrapper {
+    color: #000;
+}
+
+.sell-card__image {
+    margin-bottom: 4px;
+    max-height: 250px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sell-card__price {
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: #2196f3;
+    color: #fff;
+}
+
+.sell-card__title {
+    font-size: 18px;
+}
+
+.sell-card__first-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sell-card__duration {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+.sell-card__icon-duration {
+    width: 30px;
+    margin-right: 8px;
+}

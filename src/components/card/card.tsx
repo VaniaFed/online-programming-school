@@ -1,12 +1,10 @@
 import React, { ReactNode } from 'react';
-import classNames from 'classnames';
 import { Card as CardType } from 'types/index';
+import classNames from 'classnames';
 import styles from './card.module.scss';
 
 type Props = CardType & {
     className: string;
-    duration: string;
-    price: string;
 };
 
 interface CardContainerProps {
@@ -16,9 +14,10 @@ interface CardContainerProps {
 }
 
 const CardContainer = ({ children, href, className }: CardContainerProps) => {
+    const cardWrapperClass = classNames(className, styles.card__wrapper);
     return href ? (
         <a
-            className={className}
+            className={cardWrapperClass}
             href={href}
             target="_blank"
             rel="noopener noreferrer"
@@ -26,36 +25,15 @@ const CardContainer = ({ children, href, className }: CardContainerProps) => {
             {children}
         </a>
     ) : (
-        <div className={className}>{children}</div>
+        <div className={cardWrapperClass}>{children}</div>
     );
 };
 
-export const Card = ({
-    text,
-    imgPath,
-    duration,
-    price,
-    className,
-    href
-}: Props) => {
-    const cardClass = classNames(className, 'card');
+export const Card = ({ text, imgPath, className, href }: Props) => {
     return (
-        <CardContainer href={href} className={cardClass}>
-            <div className={styles['card__image-container']}>
-                <img className={styles.card__image} src={imgPath} alt={text} />
-            </div>
-            <div className={styles['card__first-line']}>
-                <h2 className={styles.card__title}>{text}</h2>
-                <span className={styles.card__price}>{price}</span>
-            </div>
-            <div className={styles.card__duration}>
-                <img
-                    className={styles['card__icon-duration']}
-                    src="https://image.flaticon.com/icons/svg/149/149862.svg"
-                    alt="Duration"
-                />{' '}
-                {duration}
-            </div>
+        <CardContainer href={href} className={className}>
+            <img className={styles.card__image} src={imgPath} alt={text} />
+            <h2 className={styles.card__title}>{text}</h2>
         </CardContainer>
     );
 };
