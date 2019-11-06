@@ -1,11 +1,11 @@
 import {
-    fetchUserRequest,
-    fetchUserSuccess,
-    fetchUserError
-} from 'actions/fetch-user';
+    fetchCoursesRequest,
+    fetchCoursesSuccess,
+    fetchCoursesError
+} from 'actions/course';
 
 export const actions = {
-    fetchUserRequest,
-    fetchUserSuccess,
-    fetchUserError
+    fetchCoursesRequest,
+    fetchCoursesSuccess,
+    fetchCoursesError
 };

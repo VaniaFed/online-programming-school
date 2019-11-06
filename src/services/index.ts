@@ -1,14 +1,14 @@
 import { pipe } from 'rxjs';
-import { getUser } from './get-user';
+import { getCourses } from './get-courses';
 
 const fetch = {
-    getUser
+    getCourses
 };
 
 const logger = (f: any) => ({
-    getUser: () => {
-        console.log('getting user');
-        return f.getUser();
+    getCourses: () => {
+        console.log('getting course');
+        return f.getCourses();
     }
 });
 

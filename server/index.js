@@ -35,21 +35,6 @@ const handle = app.getRequestHandler();
         app.render(req, res, '/login');
     });
 
-    server.get('/api/getUser', (req, res) => {
-        connection.query('SELECT * FROM customer', (_, results) => {
-            console.log(results[0]);
-            const { id } = results[0];
-            const user = {
-                id,
-                username: results[0].full_name,
-                password: 'epam super'
-            };
-            res.json({ user });
-
-            connection.end();
-        });
-    });
-
     server.get('/api/courses', (req, res) => {
         const courses = [
             {
