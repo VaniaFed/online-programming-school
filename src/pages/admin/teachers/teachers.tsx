@@ -3,7 +3,7 @@ import { Table } from 'components/table';
 import { TableHeader, TableRow } from 'types/index';
 import { TableAction } from 'types/index';
 import { Button } from 'components/button';
-import styles from './students.module.scss';
+import styles from './teachers.module.scss';
 
 interface Props {
     className?: string;
@@ -14,7 +14,16 @@ const headers = [
         text: 'ФИО'
     },
     {
-        text: 'Курс'
+        text: 'Тема'
+    },
+    {
+        text: 'Зарплата'
+    },
+    {
+        text: 'Дата начала работы'
+    },
+    {
+        text: 'Паспортные данные'
     }
 ];
 
@@ -25,7 +34,16 @@ const body = [
                 text: 'Федяков Иван Дмитриевич'
             },
             {
-                text: 'Frontend development'
+                text: 'Css'
+            },
+            {
+                text: '200к'
+            },
+            {
+                text: '2019.11.01'
+            },
+            {
+                text: '4353 123123'
             }
         ],
         id: '1'
@@ -36,7 +54,16 @@ const body = [
                 text: 'Федяков Иван Дмитриевич'
             },
             {
-                text: 'Backend development'
+                text: 'Css'
+            },
+            {
+                text: '200к'
+            },
+            {
+                text: '2019.11.01'
+            },
+            {
+                text: '4353 123123'
             }
         ],
         id: '2'
@@ -69,19 +96,19 @@ const actions: TableAction[] = [
         text: 'Edit'
     }
 ];
-const addStudent = () => {
-    console.log('Student was added');
+const addTeacher = () => {
+    console.log('Teacher was added');
 };
 
-export const Students = ({ className }: Props) => {
+export const Teachers = ({ className }: Props) => {
     return (
         <div className={className}>
-            <h2 className="admin__h2">Students</h2>
+            <h2 className="admin__h2">Teachers</h2>
             <Table data={tableTemporaryData} actions={actions} />
             <Button
                 text="Add"
-                className={styles['courses__add-button']}
-                onClick={addStudent}
+                className={styles['teachers__add-button']}
+                onClick={addTeacher}
             />
         </div>
     );
