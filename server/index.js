@@ -50,6 +50,33 @@ const handle = app.getRequestHandler();
         });
     });
 
+    server.get('/api/courses', (req, res) => {
+        const courses = [
+            {
+                id: 0,
+                text: 'Frontend development',
+                imgPath:
+                    'https://i.udemycdn.com/course/750x422/2314744_c707.jpg',
+                href: 'vk.com'
+            },
+            {
+                id: 1,
+                text: 'Frontend development',
+                imgPath:
+                    'https://i.udemycdn.com/course/750x422/2314744_c707.jpg',
+                href: 'vk.com'
+            },
+            {
+                id: 3,
+                text: 'Frontend development',
+                imgPath:
+                    'https://i.udemycdn.com/course/750x422/2314744_c707.jpg',
+                href: 'vk.com'
+            }
+        ];
+        res.json({ courses });
+    });
+
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(port, err => {

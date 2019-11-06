@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CardLayout } from 'components/card-layout';
 import { Button } from 'components/button';
 import { Card } from 'types/index';
@@ -28,11 +28,26 @@ const coursesTemporaryData: Card[] = [
     }
 ];
 
+const getCourses = () => {
+    fetch('/api/courses', {
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(data => data.json())
+        .then(data => {
+            console.log(data);
+        });
+};
 const addCourse = () => {
     console.log('The course was added');
 };
 
 export const Courses = ({ className }: Props) => {
+    useEffect(() => {
+        getCourses();
+    });
     return (
         <div className={className}>
             <h2 className="admin__h2">Courses</h2>
