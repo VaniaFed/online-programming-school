@@ -4,12 +4,7 @@ import { TableBody } from 'components/table/table-body';
 import classNames from 'classnames';
 import { TableHeader as ITableHeader, TableRow } from 'types/index';
 import styles from './table.module.scss';
-
-interface Action {
-    type: string;
-    fn(): any;
-    text: string;
-}
+import { TableAction } from 'types/index';
 
 interface Props {
     data: {
@@ -17,7 +12,7 @@ interface Props {
         body: TableRow[];
     };
     className?: string;
-    actions: Action[];
+    actions: TableAction[];
 }
 
 export const Table = ({ data, className, actions }: Props) => {

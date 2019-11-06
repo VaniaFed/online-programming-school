@@ -20,6 +20,33 @@ module.exports = withPlugins(
     [withTypescript, [withSass, { cssModules: true }], withImages],
     {
         webpack: config => {
+            config.module.rules.forEach(rule => {
+                if (rule.test.toString().includes('.scss')) {
+                    rule.rules = rule.use.map(useRule => {
+                        if (typeof useRule === 'string') {
+                            return { loader: useRule };
+                        }
+
+                        if (useRule.loader.startsWith('css-loader')) {
+                            return {
+                                oneOf: [
+                                    {
+                                        test: new RegExp('.module.scss$'),
+                                        loader: useRule.loader,
+                                        options: useRule.options
+                                    },
+                                    {
+                                        loader: useRule.loader,
+                                        options: {}
+                                    }
+                                ]
+                            };
+                        }
+                        return useRule;
+                    });
+                    delete rule.use;
+                }
+            });
             return merge(config, aliasConfig, serverConfig);
         }
     }

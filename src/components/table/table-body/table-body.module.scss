@@ -1,8 +1,9 @@
+@import '~_vars.scss';
 .table-body__control-button {
     padding: 8px 10px;
     border: none;
     background: #efefef;
-    color: #4a148c;
+    color: $accent-color;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;

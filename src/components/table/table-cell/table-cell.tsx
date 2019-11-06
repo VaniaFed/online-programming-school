@@ -24,7 +24,6 @@ export const TableCell = ({
                 {text}
             </a>
         );
-    console.log(href);
     return type === 'header' ? (
         <th className={cellClass}>{content}</th>
     ) : (

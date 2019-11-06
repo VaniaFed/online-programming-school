@@ -11,8 +11,8 @@ export const TableHeader = ({ headers, className }: Props) => {
     return (
         <thead className={className}>
             <tr>
-                {headers.map((item: ITableHeader) => (
-                    <TableCell text={item.text} type="header" />
+                {headers.map((item: ITableHeader, index: number) => (
+                    <TableCell text={item.text} type="header" key={index} />
                 ))}
             </tr>
         </thead>
