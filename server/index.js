@@ -57,6 +57,20 @@ const handle = app.getRequestHandler();
                 imgPath:
                     'https://i.udemycdn.com/course/750x422/2314744_c707.jpg',
                 href: 'vk.com'
+            },
+            {
+                id: 3,
+                text: 'Frontend development',
+                imgPath:
+                    'https://i.udemycdn.com/course/750x422/2314744_c707.jpg',
+                href: 'vk.com'
+            },
+            {
+                id: 3,
+                text: 'Frontend development',
+                imgPath:
+                    'https://i.udemycdn.com/course/750x422/2314744_c707.jpg',
+                href: 'vk.com'
             }
         ];
         res.json({ courses });

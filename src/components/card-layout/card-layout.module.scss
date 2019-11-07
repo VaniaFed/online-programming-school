@@ -1,13 +1,13 @@
 .card-layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
     @media screen and (max-width: 600px) {
         flex-direction: column;
     }
 }
 
 .card {
-    margin-right: 20px;
     &:last-child {
         margin-right: 0;
     }
