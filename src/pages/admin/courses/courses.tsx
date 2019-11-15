@@ -26,7 +26,7 @@ export const Courses = ({ className }: Props) => {
     return (
         <div className={className}>
             <h2 className="admin__h2">Courses</h2>
-            <CardLayout data={courses} />
+            <CardLayout data={courses as any} />
             <Button
                 text="Add"
                 className={styles['courses__add-button']}

@@ -8,6 +8,7 @@ function loadStories() {
     require('components/sell-card-layout/sell-card-layout.stories');
     require('components/card-layout/card-layout.stories');
     require('components/table/table.stories');
+    require('components/modal/modal.stories');
 }
 
 configure(loadStories, module);

@@ -57,7 +57,7 @@ export const Students = ({ className }: Props) => {
 
     const data: TableData = {
         headers,
-        body: formattedStudents
+        body: formattedStudents as any
     };
     useEffect(() => {
         dispatch(actions.fetchStudentsRequest());
