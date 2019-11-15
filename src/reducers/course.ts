@@ -8,9 +8,10 @@ import { Course } from 'types/index';
 
 export interface CourseState {
     list: Course[];
+    error?: string;
 }
 
-const initialState = {
+const initialState: CourseState = {
     list: [
         {
             id: '',
@@ -22,23 +23,6 @@ const initialState = {
         }
     ],
     error: ''
-    // students: [
-    //     {
-    //         id: 0,
-    //         fullName: '',
-    //         course: ''
-    //     }
-    // ],
-    // teachers: [
-    //     {
-    //         id: 0,
-    //         fullName: '',
-    //         topic: '',
-    //         salary: '',
-    //         dateStartWorking: '',
-    //         passportData: ''
-    //     }
-    // ],
 };
 
 export const course = (state = initialState, action: any): CourseState => {

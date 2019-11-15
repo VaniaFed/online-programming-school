@@ -8,7 +8,7 @@ const fetchCourses = async () => {
     return courses.courses;
 };
 
-export const getCourses = async () => {
+export const getCourses = () => {
     const courses = fetchCourses();
     return courses;
 };

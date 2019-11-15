@@ -76,6 +76,41 @@ const handle = app.getRequestHandler();
         res.json({ courses });
     });
 
+    server.get('/api/students', (req, res) => {
+        const students = [
+            {
+                id: '0',
+                fullName: 'Ivan Fedyakov',
+                course: 'Frontend development'
+            },
+            {
+                id: '1',
+                fullName: 'Vladimir Artemyev',
+                course: 'DevOps'
+            },
+            {
+                id: '2',
+                fullName: 'Roman Achilov',
+                course: 'Backend development'
+            }
+        ];
+        res.json({ students });
+    });
+
+    server.get('/api/teachers', (req, res) => {
+        const teachers = [
+            {
+                id: '0',
+                fullName: 'Ivan Fedyakov',
+                topic: 'React core',
+                salary: '$200',
+                dateStartWork: '20.20.1920',
+                passpordData: '2039 029343'
+            }
+        ];
+        res.json({ teachers });
+    });
+
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(port, err => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { CardLayout } from 'components/card-layout';
 import { useSelector, useDispatch } from 'react-redux';
-import { coursesSelector } from 'selectors/courses-selector';
+import { courseListSelector } from 'selectors/courses-list-selector';
 import { Button } from 'components/button';
 import { actions } from 'actions/index';
 import styles from './courses.module.scss';
@@ -17,7 +17,7 @@ const addCourse = () => {
 
 export const Courses = ({ className }: Props) => {
     const dispatch = useDispatch();
-    const courses: Course[] = useSelector(coursesSelector);
+    const courses: Course[] = useSelector(courseListSelector);
 
     useEffect(() => {
         dispatch(actions.fetchCoursesRequest());
