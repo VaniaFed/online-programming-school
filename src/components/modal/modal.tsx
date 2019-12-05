@@ -3,21 +3,19 @@ import { UserForm } from 'components/user-form';
 import styles from './modal.module.scss';
 
 interface Props {
-    data: any;
+    title: string;
+    fields: any;
+    onSubmit?(any?: any): any;
 }
 
-const modalData = [
-    { key: 'fullname', text: 'Full name' },
-    { key: 'course', text: 'Course' }
-];
 
-export const Modal = ({ data }: Props) => {
+export const Modal = ({ title, fields, onSubmit }: Props) => {
     return (
         <div className={styles.modal}>
             <UserForm
-                title="Add student"
-                fieldsData={modalData}
-                onSubmit={() => {}}
+                title={title}
+                fieldsData={fields}
+                onSubmit={onSubmit}
                 validate={() => {}}
                 modal={true}
             />
