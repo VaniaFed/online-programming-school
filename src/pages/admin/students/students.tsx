@@ -41,11 +41,7 @@ export const Students = ({ className }: Props) => {
     };
     const addStudentAndCloseModal = (studentData: any) => {
         validate(studentData);
-        console.log(studentData);
         const { fullName, course } = studentData;
-        console.log(studentData !== {});
-        console.log(fullName);
-        console.log(course.length);
         if (studentData !== {} && fullName.length >= 5 && course.length >= 5) {
             addStudentRequest(studentData);
             closeModal();

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { CardLayout } from 'components/card-layout';
 import { useDispatch, useSelector } from 'react-redux';
+
+import { CardLayout } from 'components/card-layout';
 import { courseListSelector } from 'selectors/courses-list-selector';
 import { Button } from 'components/button';
 import { Modal } from 'components/modal';
 import { actions } from 'actions/index';
-import { addCourseRequest } from 'services/send-data-to-server';
 import { Course } from 'src/types';
+import { addCourseRequest } from 'services/send-data-to-server';
+
 import styles from './courses.module.scss';
 
 interface Props {

@@ -15,3 +15,7 @@ export const addCourseRequest = (data: any) => {
 export const addStudentRequest = (data: any) => {
     sendDataToServer('/addStudent', data);
 };
+
+export const addTeacherRequest = (data: any) => {
+    sendDataToServer('/addTeacher', data);
+};

@@ -127,6 +127,25 @@ const handle = app.getRequestHandler();
         // add entry to DB
         res.json({ isError: false });
     });
+    server.post('/addTeacher', (req, res) => {
+        const {
+            fullName,
+            topic,
+            salary,
+            dateStartWork,
+            passportData
+        } = req.body;
+        const teacher = {
+            fullName,
+            topic,
+            salary,
+            dateStartWork,
+            passportData
+        };
+        console.log(teacher);
+        // add entry to DB
+        res.json({ isError: false });
+    });
 
     server.get('*', (req, res) => handle(req, res));
 
