@@ -3,6 +3,7 @@ const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser');
 const connection = require('./db');
+const v4 = require('uuid').v4;
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -109,6 +110,14 @@ const handle = app.getRequestHandler();
             }
         ];
         res.json({ teachers });
+    });
+
+    server.post('/addCourse', (req, res) => {
+        const { name } = req.body;
+        const course = { name };
+        console.log(course);
+        // add entry to DB
+        res.json({ isError: false });
     });
 
     server.get('*', (req, res) => handle(req, res));
