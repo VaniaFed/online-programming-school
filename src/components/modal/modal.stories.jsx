@@ -4,12 +4,12 @@ import { storiesOf } from '@storybook/react';
 import { Modal } from './index';
 
 const studentData = [
-    { key: 'fullname', text: 'Full name' },
+    { key: 'fullName', text: 'Full name' },
     { key: 'course', text: 'Course' }
 ];
 
 const teacherData = [
-    { key: 'fullname', text: 'Full name' },
+    { key: 'fullName', text: 'Full name' },
     { key: 'topic', text: 'Topic' },
     { key: 'salary', text: 'Salary' },
     { key: 'dateStartWork', text: 'Date start work' },

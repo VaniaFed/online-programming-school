@@ -62,7 +62,6 @@ export const Courses = ({ className }: Props) => {
                 className={styles['courses__add-button']}
                 onClick={() => {
                     showModal();
-                    setIsModalShowed(true);
                 }}
             />
         </div>

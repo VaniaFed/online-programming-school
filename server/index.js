@@ -120,6 +120,14 @@ const handle = app.getRequestHandler();
         res.json({ isError: false });
     });
 
+    server.post('/addStudent', (req, res) => {
+        const { fullName, course } = req.body;
+        const student = { name: fullName, course };
+        console.log(student);
+        // add entry to DB
+        res.json({ isError: false });
+    });
+
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(port, err => {

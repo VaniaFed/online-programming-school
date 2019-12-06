@@ -7,6 +7,11 @@ const sendDataToServer = (url: any, data: any) => {
         body: JSON.stringify(data)
     });
 };
+
 export const addCourseRequest = (data: any) => {
     sendDataToServer('/addCourse', data);
+};
+
+export const addStudentRequest = (data: any) => {
+    sendDataToServer('/addStudent', data);
 };

@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { Table } from 'components/table';
-import { Student, TableAction, TableHeader, TableRow } from 'types/index';
+import { Modal } from 'components/modal';
 import { Button } from 'components/button';
 import { studentListSelector } from 'selectors/student-list-selector';
 import { actions } from 'actions/index';
 import { entriesToTable } from 'lib/entries-to-table';
+import { addStudentRequest } from 'services/send-data-to-server';
+
+import { Student, TableAction, TableHeader, TableRow } from 'types/index';
 import styles from './students.module.scss';
 
 interface Props {
@@ -17,14 +21,36 @@ interface TableData {
     body: TableRow[];
 }
 
-const addStudent = () => {
-    console.log('Student was added');
-};
-
 export const Students = ({ className }: Props) => {
-    const dispatch = useDispatch();
-    const students: Student[] = useSelector(studentListSelector);
-    const formattedStudents = entriesToTable(students);
+    const [isModalShowed, setIsModalShowed] = useState(false);
+    const showModal = () => setIsModalShowed(true);
+    const closeModal = () => setIsModalShowed(false);
+    const studentsModalFields = [
+        { key: 'fullName', text: 'Full name' },
+        { key: 'course', text: 'Course' }
+    ];
+    const validate = (fields: any) => {
+        const validFields = fields;
+        if (!fields.fullName) {
+            validFields.fullName = '';
+        }
+        if (!fields.course) {
+            validFields.course = '';
+        }
+        return validFields;
+    };
+    const addStudentAndCloseModal = (studentData: any) => {
+        validate(studentData);
+        console.log(studentData);
+        const { fullName, course } = studentData;
+        console.log(studentData !== {});
+        console.log(fullName);
+        console.log(course.length);
+        if (studentData !== {} && fullName.length >= 5 && course.length >= 5) {
+            addStudentRequest(studentData);
+            closeModal();
+        }
+    };
 
     const tableActions: TableAction[] = [
         {
@@ -54,6 +80,9 @@ export const Students = ({ className }: Props) => {
         }
     ];
 
+    const dispatch = useDispatch();
+    const students: Student[] = useSelector(studentListSelector);
+    const formattedStudents = entriesToTable(students);
     const data: TableData = {
         headers,
         body: formattedStudents as any
@@ -64,11 +93,25 @@ export const Students = ({ className }: Props) => {
     return (
         <div className={className}>
             <h2 className="admin__h2">Students</h2>
-            {data.body && <Table data={data} actions={tableActions}/>}
+            {data.body && <Table data={data} actions={tableActions} />}
+            <Modal
+                fields={studentsModalFields}
+                title="Add a student"
+                onSubmit={studentData => {
+                    addStudentAndCloseModal(studentData);
+                }}
+                validate={(fields: any) => {
+                    validate(fields);
+                }}
+                className={!isModalShowed && 'hidden'}
+                onCloseModal={closeModal}
+            />
             <Button
                 text="Add"
                 className={styles['courses__add-button']}
-                onClick={addStudent}
+                onClick={() => {
+                    showModal();
+                }}
             />
         </div>
     );
