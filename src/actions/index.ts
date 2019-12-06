@@ -1,19 +1,7 @@
-import {
-    fetchCoursesRequest,
-    fetchCoursesSuccess,
-    fetchCoursesError
-} from 'actions/course';
-import {
-    fetchStudentsRequest,
-    fetchStudentsSuccess,
-    fetchStudentsError
-} from 'actions/student';
+import { fetchCoursesError, fetchCoursesRequest, fetchCoursesSuccess } from 'actions/course';
+import { fetchStudentsError, fetchStudentsRequest, fetchStudentsSuccess } from 'actions/student';
 
-import {
-    fetchTeachersRequest,
-    fetchTeachersSuccess,
-    fetchTeachersError
-} from 'actions/teacher';
+import { fetchTeachersError, fetchTeachersRequest, fetchTeachersSuccess } from 'actions/teacher';
 
 export const actions = {
     fetchCoursesRequest,

@@ -5,9 +5,9 @@ import styles from './modal.module.scss';
 interface Props {
     title: string;
     fields: any;
+
     onSubmit?(any?: any): any;
 }
-
 
 export const Modal = ({ title, fields, onSubmit }: Props) => {
     return (
@@ -17,7 +17,7 @@ export const Modal = ({ title, fields, onSubmit }: Props) => {
                 fieldsData={fields}
                 onSubmit={onSubmit}
                 validate={() => {}}
-                modal={true}
+                modal
                 className={styles.modal__form}
             />
         </div>

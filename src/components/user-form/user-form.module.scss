@@ -1,47 +1,48 @@
 .form {
-    width: 600px;
-    margin: 0 auto;
-    padding: 40px 60px;
-    background: #fff;
+  width: 600px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  background: #fff;
 }
 
 .form__title {
-    font-size: 30px;
-    font-weight: 900;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .form__label {
-    margin-bottom: 10px;
-    display: inline-block;
-    font-weight: 700;
-    font-size: 16px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .form__text-input {
-    padding: 14px 20px;
-    width: 100%;
-    margin-bottom: 20px;
+  padding: 14px 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
+
 .form__text-input::last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .form__button-submit {
-    width: 100%;
-    padding: 14px 20px;
-    margin-top: 6px;
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 6px;
 }
 
 .form__first-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .modal__close {
-    display: block;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }

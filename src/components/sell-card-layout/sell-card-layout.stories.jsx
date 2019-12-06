@@ -51,5 +51,5 @@ const rowDataWithoutLinks = [
     }
 ];
 storiesOf('SellCardLayout', module)
-    .add('link', () => <SellCardLayout data={rowDataWithLinks} />)
-    .add('no-link', () => <SellCardLayout data={rowDataWithoutLinks} />);
+    .add('link', () => <SellCardLayout data={rowDataWithLinks}/>)
+    .add('no-link', () => <SellCardLayout data={rowDataWithoutLinks}/>);

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { CardLayout } from 'components/card-layout';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { courseListSelector } from 'selectors/courses-list-selector';
 import { Button } from 'components/button';
 import { actions } from 'actions/index';
+import { Course } from 'src/types';
 import styles from './courses.module.scss';
-import { Course } from 'types/index';
 
 interface Props {
     className?: string;

@@ -8,6 +8,7 @@ storiesOf('UserForm', module).add('regular', () => (
     <UserForm
         title="Form title"
         fieldsData={formFieldsData}
-        onSubmit={() => {}}
+        onSubmit={() => {
+        }}
     />
 ));

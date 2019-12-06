@@ -1,13 +1,5 @@
-import {
-    FETCH_ALL_COURSES_REQUEST,
-    FETCH_ALL_COURSES_SUCCESS,
-    FETCH_ALL_COURSES_ERROR
-} from 'user-constants';
-import {
-    FetchCoursesRequestAction,
-    FetchCoursesSuccessAction,
-    FetchCoursesErrorAction
-} from './course-types';
+import { FETCH_ALL_COURSES_ERROR, FETCH_ALL_COURSES_REQUEST, FETCH_ALL_COURSES_SUCCESS } from 'user-constants';
+import { FetchCoursesErrorAction, FetchCoursesRequestAction, FetchCoursesSuccessAction } from './course-types';
 import { Course } from 'types/index';
 
 export const fetchCoursesRequest = (): FetchCoursesRequestAction => {

@@ -1,13 +1,5 @@
-import {
-    FETCH_ALL_TEACHERS_REQUEST,
-    FETCH_ALL_TEACHERS_SUCCESS,
-    FETCH_ALL_TEACHERS_ERROR
-} from 'user-constants';
-import {
-    FetchTeachersRequestAction,
-    FetchTeachersSuccessAction,
-    FetchTeachersErrorAction
-} from './teacher-types';
+import { FETCH_ALL_TEACHERS_ERROR, FETCH_ALL_TEACHERS_REQUEST, FETCH_ALL_TEACHERS_SUCCESS } from 'user-constants';
+import { FetchTeachersErrorAction, FetchTeachersRequestAction, FetchTeachersSuccessAction } from './teacher-types';
 import { Teacher } from 'types/index';
 
 export const fetchTeachersRequest = (): FetchTeachersRequestAction => {

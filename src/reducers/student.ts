@@ -1,9 +1,6 @@
 /* eslint-disable no-param-reassign */
 import produce from 'immer';
-import {
-    FETCH_ALL_STUDENTS_SUCCESS,
-    FETCH_ALL_STUDENTS_ERROR
-} from 'user-constants';
+import { FETCH_ALL_STUDENTS_ERROR, FETCH_ALL_STUDENTS_SUCCESS } from 'user-constants';
 import { Student } from 'types/index';
 
 export interface StudentState {

@@ -1,4 +1,4 @@
-import { stringify, parse } from 'query-string';
+import { parse, stringify } from 'query-string';
 
 export const pushToHistory = params => {
     const existedHistoryData = parse(window.location.search);

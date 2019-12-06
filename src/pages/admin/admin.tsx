@@ -5,21 +5,21 @@ import { Students } from './students';
 import { Teachers } from './teachers';
 import './admin.scss';
 
-interface StandartContainerProps {
+interface StandardContainerProps {
     children: ReactNode;
 }
 
-const StandartContainer = ({ children }: StandartContainerProps) => (
+const StandardContainer = ({ children }: StandardContainerProps) => (
     <div className={styles['standard-container']}>{children}</div>
 );
 
 export const Admin = () => {
     return (
-        <StandartContainer>
+        <StandardContainer>
             <h1 className="admin__h1">Admin panel</h1>
-            <Courses className="admin__courses" />
-            <Students className="admin__students" />
-            <Teachers className="admin__students" />
-        </StandartContainer>
+            <Courses className="admin__courses"/>
+            <Students className="admin__students"/>
+            <Teachers className="admin__students"/>
+        </StandardContainer>
     );
 };

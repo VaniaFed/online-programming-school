@@ -1,8 +1,7 @@
 import React from 'react';
 import { TableCell } from 'components/table/table-cell';
-import { TableRow, TableCell as ITableCell } from 'types/index';
+import { TableAction, TableCell as ITableCell, TableRow } from 'types/index';
 import styles from './table-body.module.scss';
-import { TableAction } from 'types/index';
 
 interface Props {
     body: TableRow[];

@@ -35,13 +35,13 @@ const CardContainer = ({ children, href, className }: CardContainerProps) => {
 };
 
 export const SellCard = ({
-    text,
-    imgPath,
-    duration,
-    price,
-    className,
-    href
-}: Props) => {
+                             text,
+                             imgPath,
+                             duration,
+                             price,
+                             className,
+                             href
+                         }: Props) => {
     const cardClass = classNames(className, 'sell-card');
     return (
         <CardContainer href={href} className={cardClass}>

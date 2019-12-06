@@ -86,5 +86,5 @@ const actions = [
 ];
 
 storiesOf('Table', module).add('regular', () => (
-    <Table data={data} actions={actions} />
+    <Table data={data} actions={actions}/>
 ));

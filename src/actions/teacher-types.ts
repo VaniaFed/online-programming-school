@@ -1,8 +1,4 @@
-import {
-    FETCH_ALL_TEACHERS_REQUEST,
-    FETCH_ALL_TEACHERS_ERROR,
-    FETCH_ALL_TEACHERS_SUCCESS
-} from 'user-constants';
+import { FETCH_ALL_TEACHERS_ERROR, FETCH_ALL_TEACHERS_REQUEST, FETCH_ALL_TEACHERS_SUCCESS } from 'user-constants';
 import { Teacher } from 'src/types';
 
 export interface FetchTeachersRequestAction {

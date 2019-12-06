@@ -16,5 +16,5 @@ const headers = [
 ];
 
 storiesOf('TableHeader', module).add('regular', () => (
-    <TableHeader headers={headers} />
+    <TableHeader headers={headers}/>
 ));

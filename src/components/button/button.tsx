@@ -4,11 +4,11 @@ import styles from './button.module.scss';
 import { Props } from './props';
 
 export const Button: FC<Props> = ({
-    text,
-    type = 'button',
-    className,
-    onClick
-}: Props) => {
+                                      text,
+                                      type = 'button',
+                                      className,
+                                      onClick
+                                  }: Props) => {
     const resultClass = classNames(className, styles.button);
     return (
         // eslint-disable-next-line react/button-has-type

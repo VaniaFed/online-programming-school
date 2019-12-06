@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 import produce from 'immer';
 import {
-    FETCH_ALL_COURSES_SUCCESS,
-    FETCH_ALL_COURSES_ERROR
+    FETCH_ALL_COURSES_ERROR,
+    FETCH_ALL_COURSES_SUCCESS
 } from 'user-constants';
 import { Course } from 'types/index';
 

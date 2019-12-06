@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'components/table';
-import { TableHeader, TableRow } from 'types/index';
-import { TableAction } from 'types/index';
+import { TableAction, TableHeader, TableRow } from 'types/index';
 import { Button } from 'components/button';
 import { entriesToTable } from 'lib/entries-to-table';
 import { teacherListSelector } from 'selectors/teacher-list-selector';
@@ -73,7 +72,7 @@ export const Teachers = ({ className }: Props) => {
     return (
         <div className={className}>
             <h2 className="admin__h2">Teachers</h2>
-            <Table data={data} actions={tableActions} />
+            <Table data={data} actions={tableActions}/>
             <Button
                 text="Add"
                 className={styles['teachers__add-button']}

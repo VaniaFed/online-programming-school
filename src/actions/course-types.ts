@@ -1,8 +1,4 @@
-import {
-    FETCH_ALL_COURSES_REQUEST,
-    FETCH_ALL_COURSES_ERROR,
-    FETCH_ALL_COURSES_SUCCESS
-} from 'user-constants';
+import { FETCH_ALL_COURSES_ERROR, FETCH_ALL_COURSES_REQUEST, FETCH_ALL_COURSES_SUCCESS } from 'user-constants';
 import { Course } from 'src/types';
 
 export interface FetchCoursesRequestAction {

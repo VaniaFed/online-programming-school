@@ -23,7 +23,8 @@ export const LoginPage = () => {
         });
     };
 
-    const validate = () => {};
+    const validate = () => {
+    };
     return (
         <UserForm
             title="Login"
