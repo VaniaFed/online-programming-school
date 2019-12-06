@@ -18,6 +18,7 @@ export const Modal = ({ title, fields, onSubmit }: Props) => {
                 onSubmit={onSubmit}
                 validate={() => {}}
                 modal={true}
+                className={styles.modal__form}
             />
         </div>
     );
